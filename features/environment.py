@@ -9,16 +9,16 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
-def browser_init(context, scenario):
-    """
-    :param context: Behave context
-    :param test_name: scenario.name
-    """
 # def browser_init(context, scenario):
-#     driver_path = ChromeDriverManager().install()
-#     service = Service(driver_path)
-#     context.driver = webdriver.Chrome(service=service)
-#     context.driver.maximize_window()
+#     """
+#     :param context: Behave context
+#     :param test_name: scenario.name
+#     """
+def browser_init(context, scenario):
+    driver_path = ChromeDriverManager().install()
+    service = Service(driver_path)
+    context.driver = webdriver.Chrome(service=service)
+    context.driver.maximize_window()
 
     # ########### GOOGLE CHROME ###########################
     #options = ChromeOptions()
@@ -36,7 +36,7 @@ def browser_init(context, scenario):
     #context.driver = webdriver.Chrome('service=service')
     #context.driver = webdriver.Firefox(service=service)
 
-    context.driver = webdriver.Safari()
+    #context.driver = webdriver.Safari()
     #context.driver = webdriver.Firefox()
 
     ##HEADLESS MODE ##
