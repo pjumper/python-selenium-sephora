@@ -8,5 +8,5 @@ class MainPage(Page):
 
     def open_home(self):
         self.open_url('https://www.sephora.com/')
-        sleep(10)
+
 
