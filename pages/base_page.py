@@ -20,8 +20,8 @@ class Page:
     def find_elements(self, *locator):
         return self.driver.find_elements(*locator)
 
-    def input_text(self, *locator):
-        self.driver.find_element(*locator).text()
+    def input_text(self, text, *locator):
+        self.driver.find_element(*locator).send_keys(text)
 
     def wait_for_element_click(self, *locator):
         self.wait.until(EC.element_to_be_clickable(locator))
